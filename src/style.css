@@ -1,0 +1,35 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.grey {
+    flex: 1;
+    background-color: grey;
+    height: 100%;
+    text-align: center;
+}
+
+.white {
+    flex: 1;
+    background-color: white;
+    height: 100%;
+    text-align: center;
+}
+
+.navbar {
+    background-color: aqua;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
