@@ -43,7 +43,9 @@ export function addTask(createtaskList) {
     const userInput = prompt('Enter the task name:');
     taskName.textContent = userInput || 'Default Task Name';
     const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete-btn';
     deleteButton.textContent = '✖';
+
     taskBox.appendChild(checkbox);
     taskBox.appendChild(taskName);
     taskBox.appendChild(deleteButton);
