@@ -11,14 +11,14 @@ import * as Code from './code.js';
 const projects = [];
 
 const buttons = document.querySelectorAll('.btn');
+
+
 buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
         if (index === 0) {
             const newProject = Code.addProject();
             Code.addHeadline(newProject);
             Code.addListButton(newProject);
-            const newTaskList = Code.taskList(newProject);
-            Code.addTask(newTaskList);
             projects.push({project: newProject, taskList: newTaskList});
         } else if (index === 1) {
             
@@ -26,4 +26,10 @@ buttons.forEach((button, index) => {
     });
 });
 
-
+const addListButton = document.querySelector('.add-list');
+const taskLists = [];
+addListButton.addEventListener('click', () => {
+    const newTaskList = Code.taskList(projectName);
+    Code.addTask(newTaskList);
+    taskLists.push(newTaskList);
+})
