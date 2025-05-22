@@ -20,7 +20,7 @@ export function addHeadline(projectName) {
 
 export function taskList(projectName) {
     const createtaskList = document.createElement('ul');
-    taskList.className = 'lists';
+    createtaskList.className = 'lists';
     projectName.appendChild(createtaskList);
 
     return createtaskList;
