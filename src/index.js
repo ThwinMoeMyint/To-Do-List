@@ -1,5 +1,4 @@
 import './style.css';
-import './index.html';
 import * as Code from './code.js';
 
 // const projectName = Code.addProject();
@@ -18,18 +17,18 @@ buttons.forEach((button, index) => {
         if (index === 0) {
             const newProject = Code.addProject();
             Code.addHeadline(newProject);
+            const newTaskList = Code.taskList(newProject);
             Code.addListButton(newProject);
             projects.push({project: newProject, taskList: newTaskList});
+
+            const addListButton = newProject.querySelector('.add-list');
+            addListButton.addEventListener('click', () => {
+            Code.addTask(newTaskList);
+            })
         } else if (index === 1) {
             
         }
     });
 });
 
-const addListButton = document.querySelector('.add-list');
-const taskLists = [];
-addListButton.addEventListener('click', () => {
-    const newTaskList = Code.taskList(projectName);
-    Code.addTask(newTaskList);
-    taskLists.push(newTaskList);
-})
+
